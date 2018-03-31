@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RPS-Multiplayer</title>
+        <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    </head>
+    <body>
+        <div class="container">
+                <div class="jumbotron text-center" style="background-color: black; color: white">
+                        <img src="assets/images/rps.png" alt="rps" width="300px" height="150px" class="text-center">
+                        <h3 class="text-center">Multiplayer</h3>
+                </div>
+                 <!-- Player Name Section -->
+	        <div class="formPanel text-center"> 
+                <form id="name-form">
+                      <input type="text" id="name-input" placeholder="Your Name">
+                      <input id="add-name" type="submit" value="Submit">
+                </form>
+            </div> <!-- End Player Name Section  -->
+                    <!-- Player 1 Section -->
+		    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="panel panel-default playerPanel" id="playerPanel1">
+                            <div class="panel-heading panelName playerOneName">
+                                <h3 class="panel-title text-center" id="playerOneName"></h3>
+                            </div>
+    
+                            <div class="panel-body panelOption text-center">
+                                <button class="option" id="r" value="r">Rock</button>
+                            </div>
+    
+                            <div class="panel-body panelOption text-center">
+                                <button class="option" id="p" value="p">Paper</button>
+                            </div>
+    
+                            <div class="panel-body panelOption text-center">
+                                <button class="option" id="s" value="s">Scissors</button>
+                            </div>
+    
+    
+                            <div class="panel-body panelStats text-center">
+                                <div class="stats" id="player1Stats"></div>
+                            </div>
+                        </div>
+            </div> <!-- End Player 1 Section -->
+            <div class="col-lg-4 col-md-4 col-sm-4">
+		            <div class="panel panel-default gamePanel">
+		            	<h3 class="panel-title text-center" id="waitingNotice"></h3>
+		            	<h3 class="panel-title text-center" id="roundOutcome">Rock-Paper-Scissor</h3>
+		            </div>
+		    </div>    
+            <div class="col-lg-4 col-md-4 col-sm-4">
+		            <div class="panel panel-default playerPanel" id="playerPanel2">
+		                <div class="panel-heading panelName playerTwoName">
+							<h3 class="panel-title text-center" id="playerTwoName"></h3>
+						</div>
+
+		                <div class="panel-body panelOption text-center">
+		                	<button class="option" id="r" value="r">Rock</button>
+		                </div>
+
+		                <div class="panel-body panelOption text-center">
+		                	<button class="option" id="p" value="p">Paper</button>
+		                </div>
+
+		                <div class="panel-body panelOption text-center">
+		                	<button class="option" id="s" value="s">Scissors</button>
+		                </div>
+
+
+		                <div class="panel-body panelStats text-center">
+		                	<div class="stats" id="player2Stats"></div>
+		                </div>
+		            </div>
+		    </div>
+
+        </div>
+        <script type="text/javascript" src="./assets/js/file.js"></script>
+    </body>
+</html>
